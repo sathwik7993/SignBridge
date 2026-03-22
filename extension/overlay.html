@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <span>SignBridge ASL</span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div id="video-container">
+            <video id="asl-video" autoplay muted playsinline></video>
+            <div id="loading-spinner" style="display:none;">Loading Videos...</div>
+        </div>
+        <div id="controls">
+            <button id="play-btn">Play</button>
+            <button id="pause-btn">Pause</button>
+        </div>
+        <div id="subtitles">Waiting for text...</div>
+        <div id="original-text"></div>
+    </div>
+    
+    <script src="overlay.js"></script>
+</body>
+</html>

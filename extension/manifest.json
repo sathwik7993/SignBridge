@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "SignBridge",
+  "version": "1.0",
+  "description": "Translates selected text into Sign Language using a 3D Avatar.",
+  "permissions": ["activeTab", "contextMenus"],
+  "host_permissions": ["<all_urls>", "http://localhost:8000/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["overlay.html", "overlay.js", "overlay.css", "lib/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
